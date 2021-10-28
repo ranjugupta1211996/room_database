@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         val adapter = ListAdapter()
         recycler_view.adapter = adapter
         recycler_view.layoutManager = LinearLayoutManager(this)
-
         viewModel.allGroups.observe(this) { list: List<Group> ->
             viewModel.allUrls.observe(this) { baseurl ->
                 Log.d("HK", baseurl.toString())
